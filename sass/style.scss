@@ -182,10 +182,6 @@ html {
   bottom: calc(1rem + 10px);
 }
 
-
-
-
-
 .header {
   height: 70px;
   width: 100%;
@@ -233,22 +229,17 @@ html {
   margin: 0.5rem 0;
 }
 
-
 // .top-right-image {
 //   position: fixed;
 //   top: 1rem;
 //   left: 1rem;
 //   z-index: 2;
-  
 
 //   img {
 //     width: 23vh; /* Адаптивный размер */
 //     height: auto; /* Поддержание пропорций */
 //   }
 // }
-
-
-
 
 @media screen and (max-width: 1400px) {
   .full-width-image {
@@ -285,7 +276,6 @@ html {
   }
   
 }
-
 
 .marquee-container {
     background-color: rgb(243 198 132);
@@ -324,7 +314,6 @@ html {
         transform: translateX(-50%);
     }
 }
-
 
 @media (max-width: 1024px) {
 
@@ -450,8 +439,7 @@ html {
   //     margin: 0 auto;
 
   //     .element {
-          
-       
+               
   //         padding: 21px;
   //         text-align: center;
   //         border-radius: 10px;
