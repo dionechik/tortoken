@@ -1,0 +1,833 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import './btn.scss';
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+// .main {
+//   height: 100vh; /* Секция занимает всю высоту экрана */
+//   width: 100%;
+//   // .container {
+//   //   display: flex;
+//   //   align-items: center;
+//   //   justify-content: center;
+//   //   text-align: center;
+//   //   position: relative;
+//   //   overflow: hidden;
+//   //   background-color: #00BFFF; /* Цвет фона для секции */
+
+//   //   &::before {
+//   //     content: "";
+//   //     position: absolute;
+//   //     inset: 0;
+//   //     background-color: #00BFFF;
+//   //     z-index: 1;
+//   //   }
+
+//   //   header {
+//   //     position: relative;
+//   //     z-index: 2;
+
+//   //     .title {
+//   //       font-family: "Luckiest Guy", cursive;
+//   //       font-weight: 400;
+//   //       font-style: normal;
+//   //       font-size: clamp(2rem, 5vw, 4rem); /* Минимум: 2rem, Предпочтительный: 5vw, Максимум: 4rem */
+//   //       font-weight: bold;
+//   //       color: black;
+//   //       margin: 0;
+//   //     }
+
+//   //     .subtitle {
+//   //       font-family: "Nerko One", cursive;
+//   //       font-weight: 400;
+//   //       font-style: normal;
+//   //       font-size: clamp(2rem, 4vw, 2.5rem); /* Минимум: 1rem, Предпочтительный: 3vw, Максимум: 1.5rem */
+//   //       font-weight: 600;
+//   //       color: black;
+//   //       margin: 0.5rem 0;
+//   //     }
+
+//   //     .explore-button {
+//   //       background-color: #FF0000;
+//   //       color: white;
+//   //       font-size: clamp(1rem, 2.5vw, 1.25rem); /* Минимум: 1rem, Предпочтительный: 2.5vw, Максимум: 1.25rem */
+//   //       padding: 0.5rem 1rem;
+//   //       margin-top: 1rem;
+//   //       border-radius: 0.5rem;
+//   //       border: none;
+//   //       cursor: pointer;
+//   //     }
+//   //   }
+
+   
+    
+//   // }
+
+//   .logo {
+//     width: 100%; /* Ширина на всю страницу */
+//     height: auto; /* Сохраняем пропорции */
+//     margin: 0 auto;
+//   }
+//}
+
+.main {
+  position: relative;  // Создаем контекст для абсолютного позиционирования
+  display: flex;
+  justify-content: center;  // Центрирование контейнера по горизонтали
+  align-items: end;  // Центрирование по вертикали
+  width: 100%;
+  height: 100vh;
+  background-color: #00BFFF;
+  overflow: hidden;  // Прячем выходящее за пределы изображение
+
+  .social-media-icons {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 2;
+  
+    a {
+      margin-right: 0.75rem;
+  
+      img {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+
+    &__tablet{
+      display: none;
+      position: static;
+    }
+  }
+  
+}
+
+.mainbtn{
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.container.maintxt {
+  bottom: 13vh;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .main{
+  .social-media-icons {
+    display: none;
+    &__tablet{
+      display: block;
+      padding-bottom: 10px ;
+    }
+  }
+  }
+  .container.maintxt {
+    bottom: 8vh;
+  }
+  
+
+.mainbtn{
+
+  padding-bottom: 10px;
+}
+}
+
+
+@media screen and (max-height: 886px) {
+  .main{
+  min-height: 886px;
+  }
+  
+}
+
+
+.full-width-image {
+  position: absolute;
+  width: 100%;  // Ширина изображения 59% от ширины экрана
+  height: 100%;  // Сохраняем пропорции изображения
+  z-index: 1;  // Изображение будет под контейнером
+  object-fit: cover;  // Обрезка изображения, чтобы оно соответствовало контейнеру
+}
+
+
+.container {
+
+  position: relative;  // Контейнер будет выше изображения
+  bottom: 0px;
+  z-index: 2;  // Повышаем z-index, чтобы контейнер был выше фона
+  text-align: center;  // Центрирование текста в контейнере
+  color: #fff;  // Цвет текста
+}
+
+.containerForBtn {
+  z-index: 1;
+  position: absolute;
+  bottom: calc(1rem + 10px);
+}
+
+
+
+
+
+.header {
+  height: 70px;
+  width: 100%;
+  position: fixed;  // Закрепляем header в верхней части страницы
+  top: 0;
+  left: 0;
+  z-index: 1000;  // Задаем высокий z-index для перекрытия других элементов
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;  // Отступы слева и справа
+  background-color: transparent;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition: border-bottom 0.2s ease;  // Плавный переход для границы
+  transition: background-color 0.3s ease;
+}
+
+.header-logo {
+  height: auto;  // Картинка занимает всю высоту header
+  width: 170px;  // Пропорционально масштабируем ширину
+}
+.header.scrolled {
+  background-color: #00BFFF;  // Фон становится синим при прокрутке
+  border-bottom: 2px solid #000;  // Нижняя черная граница
+  box-shadow: 0 4px 6px 3px rgb(0 0 0 / 20%);
+}
+
+.maintitle {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(2rem, 5vw, 4rem); /* Минимум: 2rem, Предпочтительный: 5vw, Максимум: 4rem */
+  font-weight: bold;
+  color: #000000;
+  margin: 0;
+}
+
+.mainsubtitle {
+  font-family: "Nerko One", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 54px;
+  font-weight: 600;
+  color: black;
+  margin: 0.5rem 0;
+}
+
+
+// .top-right-image {
+//   position: fixed;
+//   top: 1rem;
+//   left: 1rem;
+//   z-index: 2;
+  
+
+//   img {
+//     width: 23vh; /* Адаптивный размер */
+//     height: auto; /* Поддержание пропорций */
+//   }
+// }
+
+
+
+
+@media screen and (max-width: 1400px) {
+  .full-width-image {
+    width: 100%;  // Ширина изображения 100% от ширины экрана
+  }
+  
+  
+}
+
+@media screen and (max-width: 768px) {
+  .full-width-image {
+    width: 100%;  // Ширина изображения 100% от ширины экрана
+    height: 100%;
+  }
+  
+}
+@media screen and (max-width: 560px) {
+  .maintitle{
+    font-size: 4rem;
+  }
+  .mainsubtitle{
+    font-size: calc(32px + (46 - 24) * ( (100vw - 320px) / ( 1024 - 320) ));
+  }
+  
+  .full-width-image {
+    width: 100vw;  // Ширина изображения 100% от ширины экрана
+    height: 80vh;
+    object-fit: cover;
+    top: 40%;
+  }
+
+  .btn-17{
+    margin-bottom: 2vh;
+  }
+  
+}
+
+
+.marquee-container {
+    background-color: rgb(243 198 132);
+    width: 100%;
+    height: 45px;
+    overflow: hidden;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    position: relative;
+
+    .marquee {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        white-space: nowrap;
+        animation: marquee 9s linear infinite;
+    }
+
+    span {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        color: black;
+        font-weight: bold;
+        font-size: 20px;
+
+        padding: 0 10px; /* Отступы между надписями */
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+@media (max-width: 1024px) {
+
+  .maintitle{
+    font-size: 4rem;
+  }
+  .btn-17{
+    margin-bottom: 2vh;
+  }
+  section.container header .title {
+    // font-size: calc(24px + (36 - 24) * ( (100vw - 320px) / ( 1024 - 320) ));
+    font-size: 48px;
+  }
+  section.container {
+    .social-media-icons {
+      position: absolute;
+      bottom: -1rem;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+  
+      a {
+        margin-right: 0.75rem;
+  
+        img {
+          width: 4rem;
+          height: 4rem;
+        }
+      }
+    }
+    .top-right-image {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      z-index: 2;
+  
+      img {
+        width: 23vh; /* Адаптивный размер */
+        height: auto; /* Поддержание пропорций */
+      }
+    }
+  }
+}
+
+.buy {
+  background: radial-gradient(circle, #ffffb9 0, orange 100%);
+  padding: 20px 0 20px 0;
+  text-align: center; /* Центрирование текста */
+  color: white; /* Белый текст для контраста */
+  word-break: break-all;
+  .buy__title, .buy__subtitle, .ca__title {
+    
+      margin-bottom: 20px;
+      font-weight: bold;
+  }
+  &__title {
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5em; 
+    font-weight: 600;
+    color: #000;
+    margin: 0.5rem 0;
+    
+  }
+  &__subtitle {
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    font-size: 3rem;
+    color: #000;
+    word-break: break-word;
+    overflow-wrap: break-word
+  }
+
+  .ca {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    border-radius: 50px;
+    padding: 10px 20px;
+    max-width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 30px;
+      &__title {
+          font-family: "Nerko One", cursive;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 1.5em; 
+          font-weight: 600;
+          color: white; /* Белый цвет текста */
+          margin: 0.5rem 0;
+          margin-right: 10px; /* Отступ справа от текста до кнопки */
+      }
+      .copy-btn {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        
+        img {
+            width: 20px;
+            height: 20px;
+        }
+
+        &:hover img {
+            opacity: 0.8;
+        }
+    }
+  }
+  @media (max-width: 665px) {
+      .ca{
+        margin: 0 10px 30px 10px;
+      }
+  }
+  // .responsive-block {
+  //     display: grid;
+  //     gap: 20px;
+  //     grid-template-columns: 1fr 1fr 1fr; /* По умолчанию три элемента в строке */
+  //     max-width: 1200px;
+  //     margin: 0 auto;
+
+  //     .element {
+          
+       
+  //         padding: 21px;
+  //         text-align: center;
+  //         border-radius: 10px;
+  //         transition: transform 0.3s ease;
+  //         word-wrap: break-word; /* Для поддержки старых браузеров */
+  //         overflow-wrap: break-word;
+
+  //         &__title{
+  //           font-family: "Roboto", sans-serif;
+  //           font-weight: 900;
+  //           font-style: normal;
+  //             font-size: 1.3em; 
+  //             font-weight: 600;
+  //             color: #000; /* Черный цвет текста */
+  //             margin: 0.5rem 0;
+  //             word-break: break-word;
+  //             overflow-wrap: break-word;
+  //             text-decoration: underline;
+
+             
+  //         }
+  //         img{
+  //             width: 100%;
+  //             height: auto;
+  //             margin-bottom: 10px;
+  //             border-radius: 5px;
+  //         }
+
+  //         p {
+  //             font-family: "Roboto", sans-serif;
+  //             font-weight: 500;
+  //             font-style: normal;
+  //             margin: 0;
+  //             font-size: 1.5rem;
+  //             color: #000;
+  //             word-break: break-word;
+  //             overflow-wrap: break-word;
+
+             
+  //         }
+
+  //         &:hover {
+  //             transform: scale(1.05);
+  //         }
+  //     }
+  // }
+
+
+
+  .clouds-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;  // Расстояние между облаками
+  }
+  
+  .cloud {
+    position: relative;
+    width: 100%;  // Ширина облака на десктопах
+    max-width: 500px;
+    min-width: 300px;
+    
+    img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .cloud-text {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #000;  // Цвет текста белый, чтобы был хорошо виден на фоне облака
+      font-weight: bold;  // Немного жирнее текст
+      padding: 0;
+      word-break: break-word;
+      overflow-wrap: break-word
+    }
+    
+    h2 {
+      font-family: "Nerko One", cursive;
+          font-weight: 400;
+          font-style: normal;
+      margin: 0 0 3px 0;
+      font-size: 2rem;
+    }
+    
+    p {
+      font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+      margin: 0;
+      font-size: 1.3rem;
+    }
+  }
+  
+  // Медиазапрос для планшетов
+
+  @media (max-width: 500px) {
+    .cloud {
+      a{
+        text-decoration: none;
+      }
+      .cloud-text {
+        position: absolute;
+        top: 37%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #000;  // Цвет текста белый, чтобы был хорошо виден на фоне облака
+        font-weight: bold;  // Немного жирнее текст
+        padding: 0;
+        word-break: break-word;
+        overflow-wrap: break-word
+      }
+      
+      h2 {
+        margin: 0 0 3px 0;
+
+        font-size: calc(16px + (31 - 16) * ( (100vw - 320px) / ( 500 - 320) ));
+      }
+      
+      p {
+        margin: 0;
+
+        font-size: calc(14px + (20 - 14) * ( (100vw - 320px) / ( 500 - 320) ));
+      }
+    }
+  
+  }
+  
+  // Медиазапрос для телефонов
+  @media (max-width: 480px) {
+    .cloud {
+      width: 100%;  // Одно облако в ряд
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .buy{
+      padding: 20px 10px;
+    }
+    .responsive-block {
+        grid-template-columns: 1fr 1fr ; /* 3 элемента в ряд */
+        .element img {
+          width: 75%;
+        }
+        
+    }
+}
+  @media (max-width: 768px) {
+    .buy{
+
+      &__title {
+
+        font-size: 3em; 
+
+      }
+
+      &__subtitle {
+     
+        font-size: 2em; 
+
+      }
+      
+    }
+      .responsive-block {
+          grid-template-columns: 1fr ; /* 2 элемента в ряд */
+          .element{ img {
+            width: 75%;
+          }
+          
+      }
+  }
+  }
+  #buy{
+    padding: 10px 0;
+  }
+ 
+}
+
+
+
+.ready {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; /* Секция занимает всю высоту экрана */
+  min-height: 500px;
+  background-color: #9932CC;
+&__container {
+  width: 80%; /* Основная ширина контейнера */
+  max-width: 1200px; /* Максимальная ширина для больших экранов */
+  margin: 0 auto; /* Центрируем контейнер */
+}
+}
+@media (max-width: 1022px) {
+  .ready__container {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+.congr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px; /* Отступ между текстом и картинкой */
+
+  .congr__block {
+      flex: 1; /* Занимает равное пространство с изображением */
+      display: flex;
+      align-items: center;
+  }
+
+  .congr__text {
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(4rem, 6vw, 5rem);
+    font-weight: 600;
+    color: #fff;
+      margin: 0;
+      word-break: break-word;
+      overflow-wrap: break-word;
+  }
+
+  .congr__img {
+      flex: 1; /* Занимает равное пространство с текстом */
+      display: flex;
+      justify-content: flex-end;
+
+      img {
+          max-width: 57%;
+          height: auto;
+          border-radius: 8px; /* Добавим слегка закругленные края */
+      }
+  }
+  
+  
+}
+@media (max-width: 1022px) {
+  .congr{
+    .congr__block {
+      flex: 2; /* Занимает равное пространство с изображением */
+      display: flex;
+      align-items: center;
+  }
+  .congr__text {
+    text-align: center;
+    padding-left: 30px;
+    font-size: 48px;
+
+  }
+
+  .congr__img {
+    flex: 1; /* Занимает равное пространство с текстом */
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ready__container {
+    width: 100%;
+    padding: 0 5px;
+  }
+  .congr {
+    flex-direction: column; /* Переход на вертикальный столбец */
+    align-items: center;
+
+    .congr__block {
+      order: 1; /* Сначала текст */
+      text-align: center;
+    }
+
+    .congr__img {
+      margin-top: 20px;
+      order: 2; /* Затем картинка */
+      width: 60vw;
+      height: auto;
+      display: flex;
+      justify-content: center;
+
+      img {
+        max-width: 80%; /* Картинка будет занимать 80% ширины блока */
+        height: auto;
+      }
+    }
+    .congr__text {
+      font-size: calc(36px + (56 - 36) * ( (100vw - 320px) / ( 500 - 320) ));
+      // calc(26px + (36 - 26) * ( (100vw - 320px) / ( 500 - 320) ));
+      padding-right: 20px;
+    }
+  }
+
+  .congr__text {
+    font-size: 36px; /* Уменьшаем размер шрифта для мобильных устройств */
+    padding: 10px 0;
+  }
+}
+
+
+.social {
+  text-align: center;
+  padding: 20px;
+  min-height: 430px;
+  background: radial-gradient(circle, #87CEFA	 0%, #00BFFF	 100%);
+}
+
+
+.social__title {
+  padding-top: 20px;
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.social__subtitle {
+  font-family: "Nerko One", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(2rem, 4vw, 2.5rem); /* Минимум: 1rem, Предпочтительный: 3vw, Максимум: 1.5rem */
+  font-weight: 600;
+  color: #fff;
+  margin: 0.5rem 0;
+}
+
+.social-media-icons {
+  padding: 20px;
+  a {
+    margin-right: 0.75rem;
+
+    img {
+      width: 6rem;
+      height: 6rem;
+    }
+  }
+}
+
+.social__images{
+  width: 320px;;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .social__images{
+    width:45vw;
+    height: auto;
+  }
+.social-media-icons {
+    
+      a {
+        margin-right: 0.75rem;
+  
+        img {
+          width: 3.4rem;
+          height: 3.4rem;
+        }
+      }
+    }
+}
+.imageContainer{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
