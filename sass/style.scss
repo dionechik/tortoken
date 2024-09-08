@@ -64,7 +64,6 @@ body {
   bottom: 13vh;
 }
 
-
 @media screen and (max-width: 1200px) {
   .main{
   .social-media-icons {
@@ -81,7 +80,6 @@ body {
   
 
 .mainbtn{
-
   padding-bottom: 10px;
 }
 }
@@ -148,7 +146,7 @@ body {
   font-family: "Luckiest Guy", cursive;
   font-weight: 400;
   font-style: normal;
-  font-size: clamp(2rem, 5vw, 4rem); /* Минимум: 2rem, Предпочтительный: 5vw, Максимум: 4rem */
+  font-size: clamp(2rem, 5vw, 5rem); /* Минимум: 2rem, Предпочтительный: 5vw, Максимум: 4rem */
   font-weight: bold;
   color: #000000;
   margin: 0;
@@ -161,7 +159,8 @@ body {
   font-size: 54px;
   font-weight: 600;
   color: black;
-  margin: 0.5rem 0;
+  margin: 0;
+  margin-bottom: 0.5rem;
 }
 
 @media screen and (max-width: 1400px) {
@@ -169,8 +168,6 @@ body {
     width: 100%;  // Ширина изображения 100% от ширины экрана
     height: 110%;
   }
-  
-  
 }
 
 @media screen and (max-width: 768px) {
@@ -235,7 +232,7 @@ body {
 
 @media (max-width: 1024px) {
   .maintitle{
-    font-size: 4rem;
+    font-size: 5rem;
   }
 
   section.container header .title {
@@ -472,13 +469,15 @@ body {
   align-items: center;
   height: 50vh; /* Секция занимает всю высоту экрана */
   min-height: 500px;
-  background-color: #9932CC;
-&__container {
-  width: 80%; /* Основная ширина контейнера */
-  max-width: 1200px; /* Максимальная ширина для больших экранов */
-  margin: 0 auto; /* Центрируем контейнер */
+  background: radial-gradient(circle, #b365d9 0, #9932CC 100%);
+
+  &__container {
+    width: 80%; /* Основная ширина контейнера */
+    max-width: 1200px; /* Максимальная ширина для больших экранов */
+    margin: 0 auto; /* Центрируем контейнер */
+  }
 }
-}
+
 @media (max-width: 1022px) {
   .ready__container {
     width: 100%;
@@ -555,6 +554,7 @@ body {
     width: 100%;
     padding: 0 5px;
   }
+  
   .congr {
     flex-direction: column; /* Переход на вертикальный столбец */
     align-items: center;
@@ -643,8 +643,8 @@ body {
     width:45vw;
     height: auto;
   }
-.social-media-icons {
-    
+
+  .social-media-icons {
       a {
         margin-right: 0.75rem;
   
@@ -653,8 +653,9 @@ body {
           height: 3.4rem;
         }
       }
-    }
+  }
 }
+
 .imageContainer{
   height: 100%;
   width: 100%;
