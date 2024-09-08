@@ -193,6 +193,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .main {
   position: relative;
   display: flex;
@@ -326,29 +330,25 @@ html {
 @media screen and (max-width: 1400px) {
   .full-width-image {
     width: 100%;
+    height: 110%;
   }
 }
 @media screen and (max-width: 768px) {
   .full-width-image {
     width: 100%;
-    height: 100%;
+    height: 110%;
   }
 }
 @media screen and (max-width: 560px) {
   .maintitle {
-    font-size: 4rem;
+    font-size: 5rem;
   }
   .mainsubtitle {
     font-size: calc(32px + 22 * (100vw - 320px) / 704);
   }
   .full-width-image {
-    width: 100vw;
-    height: 80vh;
-    object-fit: cover;
-    top: 40%;
-  }
-  .btn-17 {
-    margin-bottom: 2vh;
+    width: 100%;
+    height: 113%;
   }
 }
 .marquee-container {
@@ -388,9 +388,6 @@ html {
 @media (max-width: 1024px) {
   .maintitle {
     font-size: 4rem;
-  }
-  .btn-17 {
-    margin-bottom: 2vh;
   }
   section.container header .title {
     font-size: 48px;
@@ -565,12 +562,6 @@ html {
   .buy .buy {
     padding: 20px 10px;
   }
-  .buy .responsive-block {
-    grid-template-columns: 1fr 1fr; /* 3 элемента в ряд */
-  }
-  .buy .responsive-block .element img {
-    width: 75%;
-  }
 }
 @media (max-width: 768px) {
   .buy .buy__title {
@@ -578,12 +569,6 @@ html {
   }
   .buy .buy__subtitle {
     font-size: 2em;
-  }
-  .buy .responsive-block {
-    grid-template-columns: 1fr; /* 2 элемента в ряд */
-  }
-  .buy .responsive-block .element img {
-    width: 75%;
   }
 }
 .buy #buy {

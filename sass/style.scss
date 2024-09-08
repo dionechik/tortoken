@@ -15,72 +15,10 @@
 html {
   scroll-behavior: smooth;
 }
-// .main {
-//   height: 100vh; /* Секция занимает всю высоту экрана */
-//   width: 100%;
-//   // .container {
-//   //   display: flex;
-//   //   align-items: center;
-//   //   justify-content: center;
-//   //   text-align: center;
-//   //   position: relative;
-//   //   overflow: hidden;
-//   //   background-color: #00BFFF; /* Цвет фона для секции */
 
-//   //   &::before {
-//   //     content: "";
-//   //     position: absolute;
-//   //     inset: 0;
-//   //     background-color: #00BFFF;
-//   //     z-index: 1;
-//   //   }
-
-//   //   header {
-//   //     position: relative;
-//   //     z-index: 2;
-
-//   //     .title {
-//   //       font-family: "Luckiest Guy", cursive;
-//   //       font-weight: 400;
-//   //       font-style: normal;
-//   //       font-size: clamp(2rem, 5vw, 4rem); /* Минимум: 2rem, Предпочтительный: 5vw, Максимум: 4rem */
-//   //       font-weight: bold;
-//   //       color: black;
-//   //       margin: 0;
-//   //     }
-
-//   //     .subtitle {
-//   //       font-family: "Nerko One", cursive;
-//   //       font-weight: 400;
-//   //       font-style: normal;
-//   //       font-size: clamp(2rem, 4vw, 2.5rem); /* Минимум: 1rem, Предпочтительный: 3vw, Максимум: 1.5rem */
-//   //       font-weight: 600;
-//   //       color: black;
-//   //       margin: 0.5rem 0;
-//   //     }
-
-//   //     .explore-button {
-//   //       background-color: #FF0000;
-//   //       color: white;
-//   //       font-size: clamp(1rem, 2.5vw, 1.25rem); /* Минимум: 1rem, Предпочтительный: 2.5vw, Максимум: 1.25rem */
-//   //       padding: 0.5rem 1rem;
-//   //       margin-top: 1rem;
-//   //       border-radius: 0.5rem;
-//   //       border: none;
-//   //       cursor: pointer;
-//   //     }
-//   //   }
-
-   
-    
-//   // }
-
-//   .logo {
-//     width: 100%; /* Ширина на всю страницу */
-//     height: auto; /* Сохраняем пропорции */
-//     margin: 0 auto;
-//   }
-//}
+body {
+  overflow-x: hidden;
+}
 
 .main {
   position: relative;  // Создаем контекст для абсолютного позиционирования
@@ -168,7 +106,6 @@ html {
 
 
 .container {
-
   position: relative;  // Контейнер будет выше изображения
   bottom: 0px;
   z-index: 2;  // Повышаем z-index, чтобы контейнер был выше фона
@@ -229,21 +166,10 @@ html {
   margin: 0.5rem 0;
 }
 
-// .top-right-image {
-//   position: fixed;
-//   top: 1rem;
-//   left: 1rem;
-//   z-index: 2;
-
-//   img {
-//     width: 23vh; /* Адаптивный размер */
-//     height: auto; /* Поддержание пропорций */
-//   }
-// }
-
 @media screen and (max-width: 1400px) {
   .full-width-image {
     width: 100%;  // Ширина изображения 100% от ширины экрана
+    height: 110%;
   }
   
   
@@ -252,29 +178,24 @@ html {
 @media screen and (max-width: 768px) {
   .full-width-image {
     width: 100%;  // Ширина изображения 100% от ширины экрана
-    height: 100%;
+    height: 110%;
   }
   
 }
+
 @media screen and (max-width: 560px) {
   .maintitle{
-    font-size: 4rem;
+    font-size: 5rem;
   }
+
   .mainsubtitle{
     font-size: calc(32px + (46 - 24) * ( (100vw - 320px) / ( 1024 - 320) ));
   }
   
   .full-width-image {
-    width: 100vw;  // Ширина изображения 100% от ширины экрана
-    height: 80vh;
-    object-fit: cover;
-    top: 40%;
+    width: 100%;  // Ширина изображения 100% от ширины экрана
+    height: 113%;
   }
-
-  .btn-17{
-    margin-bottom: 2vh;
-  }
-  
 }
 
 .marquee-container {
@@ -316,17 +237,14 @@ html {
 }
 
 @media (max-width: 1024px) {
-
   .maintitle{
     font-size: 4rem;
   }
-  .btn-17{
-    margin-bottom: 2vh;
-  }
+
   section.container header .title {
-    // font-size: calc(24px + (36 - 24) * ( (100vw - 320px) / ( 1024 - 320) ));
     font-size: 48px;
   }
+
   section.container {
     .social-media-icons {
       position: absolute;
@@ -431,64 +349,7 @@ html {
         margin: 0 10px 30px 10px;
       }
   }
-  // .responsive-block {
-  //     display: grid;
-  //     gap: 20px;
-  //     grid-template-columns: 1fr 1fr 1fr; /* По умолчанию три элемента в строке */
-  //     max-width: 1200px;
-  //     margin: 0 auto;
-
-  //     .element {
-               
-  //         padding: 21px;
-  //         text-align: center;
-  //         border-radius: 10px;
-  //         transition: transform 0.3s ease;
-  //         word-wrap: break-word; /* Для поддержки старых браузеров */
-  //         overflow-wrap: break-word;
-
-  //         &__title{
-  //           font-family: "Roboto", sans-serif;
-  //           font-weight: 900;
-  //           font-style: normal;
-  //             font-size: 1.3em; 
-  //             font-weight: 600;
-  //             color: #000; /* Черный цвет текста */
-  //             margin: 0.5rem 0;
-  //             word-break: break-word;
-  //             overflow-wrap: break-word;
-  //             text-decoration: underline;
-
-             
-  //         }
-  //         img{
-  //             width: 100%;
-  //             height: auto;
-  //             margin-bottom: 10px;
-  //             border-radius: 5px;
-  //         }
-
-  //         p {
-  //             font-family: "Roboto", sans-serif;
-  //             font-weight: 500;
-  //             font-style: normal;
-  //             margin: 0;
-  //             font-size: 1.5rem;
-  //             color: #000;
-  //             word-break: break-word;
-  //             overflow-wrap: break-word;
-
-             
-  //         }
-
-  //         &:hover {
-  //             transform: scale(1.05);
-  //         }
-  //     }
-  // }
-
-
-
+  
   .clouds-container {
     display: flex;
     flex-wrap: wrap;
@@ -584,13 +445,6 @@ html {
     .buy{
       padding: 20px 10px;
     }
-    .responsive-block {
-        grid-template-columns: 1fr 1fr ; /* 3 элемента в ряд */
-        .element img {
-          width: 75%;
-        }
-        
-    }
 }
   @media (max-width: 768px) {
     .buy{
@@ -608,22 +462,12 @@ html {
       }
       
     }
-      .responsive-block {
-          grid-template-columns: 1fr ; /* 2 элемента в ряд */
-          .element{ img {
-            width: 75%;
-          }
-          
-      }
   }
-  }
+
   #buy{
     padding: 10px 0;
   }
- 
 }
-
-
 
 .ready {
   display: flex;
