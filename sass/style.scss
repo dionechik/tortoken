@@ -146,7 +146,7 @@ body {
   font-family: "Luckiest Guy", cursive;
   font-weight: 400;
   font-style: normal;
-  font-size: clamp(2rem, 5vw, 5rem); /* Минимум: 2rem, Предпочтительный: 5vw, Максимум: 4rem */
+  font-size: clamp(2rem, 5vw, 4rem); /* Минимум: 2rem, Предпочтительный: 5vw, Максимум: 4rem */
   font-weight: bold;
   color: #000000;
   margin: 0;
@@ -166,20 +166,20 @@ body {
 @media screen and (max-width: 1400px) {
   .full-width-image {
     width: 100%;  // Ширина изображения 100% от ширины экрана
-    height: 110%;
+    height: 112%;
   }
 }
 
 @media screen and (max-width: 768px) {
   .full-width-image {
     width: 100%;  // Ширина изображения 100% от ширины экрана
-    height: 110%;
+    height: 116%;
   }
 }
 
 @media screen and (max-width: 560px) {
   .maintitle{
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
   .mainsubtitle{
@@ -188,7 +188,7 @@ body {
   
   .full-width-image {
     width: 100%;  // Ширина изображения 100% от ширины экрана
-    height: 113%;
+    height: 115%;
   }
 }
 
